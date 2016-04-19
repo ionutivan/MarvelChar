@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MarvelCharDetailViewController" customModule="MarvelChar" customModuleProvider="target">
+            <connections>
+                <outlet property="closeButton" destination="PfX-36-Kkc" id="eTo-KC-SGT"/>
+                <outlet property="comicsButton" destination="379-Z2-qrD" id="WVI-O5-Wcp"/>
+                <outlet property="detailButton" destination="Sdv-53-nNx" id="tht-b8-OjC"/>
+                <outlet property="heroImage" destination="6s8-Wr-A3X" id="Jlu-KG-sAo"/>
+                <outlet property="heroNameLabel" destination="7c4-Za-PlL" id="Egs-8a-rd1"/>
+                <outlet property="summaryLabel" destination="GKt-ce-ruU" id="re5-at-aOz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wikiButton" destination="yrK-sx-vHA" id="7GJ-VP-lqY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfX-36-Kkc">
+                    <rect key="frame" x="22" y="25" width="39" height="30"/>
+                    <state key="normal" title="Close"/>
+                    <connections>
+                        <action selector="closeView:" destination="-1" eventType="touchUpInside" id="Hk3-KA-i5z"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6s8-Wr-A3X">
+                    <rect key="frame" x="20" y="65" width="560" height="280"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="6s8-Wr-A3X" secondAttribute="height" multiplier="2:1" id="4Zm-Cj-IcY"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7c4-Za-PlL">
+                    <rect key="frame" x="279" y="369" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKt-ce-ruU">
+                    <rect key="frame" x="279" y="398" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdv-53-nNx">
+                    <rect key="frame" x="183" y="449" width="47" height="30"/>
+                    <state key="normal" title="Details"/>
+                    <connections>
+                        <action selector="goToHeroDetail:" destination="-1" eventType="touchUpInside" id="56d-D3-OxX"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrK-sx-vHA">
+                    <rect key="frame" x="285" y="449" width="30" height="30"/>
+                    <state key="normal" title="Wiki"/>
+                    <connections>
+                        <action selector="goToHeroWiki:" destination="-1" eventType="touchUpInside" id="AWG-hR-mOJ"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="379-Z2-qrD">
+                    <rect key="frame" x="370" y="449" width="52" height="30"/>
+                    <state key="normal" title="Comics"/>
+                    <connections>
+                        <action selector="goToHeroComics:" destination="-1" eventType="touchUpInside" id="p3F-oj-GzS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="7c4-Za-PlL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="23h-Rq-Pmi"/>
+                <constraint firstItem="6s8-Wr-A3X" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4mn-73-33S"/>
+                <constraint firstItem="yrK-sx-vHA" firstAttribute="top" secondItem="GKt-ce-ruU" secondAttribute="bottom" constant="30" id="Drq-tc-be5"/>
+                <constraint firstItem="GKt-ce-ruU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="L6G-1s-iqB"/>
+                <constraint firstItem="PfX-36-Kkc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="22" id="LyX-RF-xpA"/>
+                <constraint firstItem="yrK-sx-vHA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NTi-ry-Io2"/>
+                <constraint firstItem="6s8-Wr-A3X" firstAttribute="top" secondItem="PfX-36-Kkc" secondAttribute="bottom" constant="10" id="TgH-U2-NhS"/>
+                <constraint firstItem="GKt-ce-ruU" firstAttribute="top" secondItem="7c4-Za-PlL" secondAttribute="bottom" constant="8" id="f9d-AF-TsF"/>
+                <constraint firstItem="6s8-Wr-A3X" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="j7s-p0-DA9"/>
+                <constraint firstItem="7c4-Za-PlL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kBY-4c-YaY"/>
+                <constraint firstItem="PfX-36-Kkc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="mFR-Qf-Iyt"/>
+                <constraint firstItem="GKt-ce-ruU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="plV-ia-Uit"/>
+                <constraint firstItem="7c4-Za-PlL" firstAttribute="top" secondItem="6s8-Wr-A3X" secondAttribute="bottom" constant="24" id="q6C-DK-MCv"/>
+                <constraint firstItem="379-Z2-qrD" firstAttribute="centerY" secondItem="yrK-sx-vHA" secondAttribute="centerY" id="tun-NI-e12"/>
+                <constraint firstItem="379-Z2-qrD" firstAttribute="leading" secondItem="yrK-sx-vHA" secondAttribute="trailing" constant="55" id="ukb-To-wDU"/>
+                <constraint firstItem="yrK-sx-vHA" firstAttribute="centerY" secondItem="Sdv-53-nNx" secondAttribute="centerY" id="ybE-G5-1oq"/>
+                <constraint firstItem="yrK-sx-vHA" firstAttribute="leading" secondItem="Sdv-53-nNx" secondAttribute="trailing" constant="55" id="yhc-DS-2zH"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
